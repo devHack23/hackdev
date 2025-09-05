@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio HACKDEV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <nav class="bg-white shadow-md px-6 py-4 fixed w-full top-0 z-50">
+    <div class="flex items-center justify-between">
+      <div class="text-2xl font-extrabold text-gray-800 tracking-wide">HACKDEV</div>
+
+      <!-- Menu Desktop -->
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="#popos" class="hover:text-blue-600 transition">À propos</a></li>
+        <li><a href="#competence" class="hover:text-blue-600 transition">Compétences</a></li>
+        <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+
+      <!-- Burger Menu -->
+      <div class="md:hidden">
+        <button id="burgerBtn" class="text-gray-800 text-3xl focus:outline-none">☰</button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="hidden flex-col mt-4 space-y-4 text-gray-700 font-medium md:hidden">
+      <a href="#popos" class="hover:text-blue-600 transition">À propos</a>
+      <a href="#competence" class="hover:text-blue-600 transition">Compétences</a>
+      <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+      <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- SECTION A PROPOS -->
+  <section id="popos" class="bg-gray-800 shadow-md py-20 px-6 mt-24">
+    <h1 class="text-center font-bold text-3xl text-white mb-6 hover:underline">À PROPOS</h1>
+    <p class="text-white text-center max-w-2xl mx-auto leading-relaxed">
+      Je me nomme <span class="font-bold">AMADOU WOURY DIALLO</span>, étudiant en licence 3 
+      en <span class="italic">développement et administration d’applications</span> à l’Université 
+      Alioune Diop de Bambey. Je suis un développeur <span class="text-blue-400">Full-Stack</span>, passionné 
+      par la programmation et la création de solutions innovantes.
+    </p>
+
+    <div class="flex justify-center mt-6">
+      <img src="IMG_0620.HEIC" alt="Photo de profil"
+        class="rounded-full object-cover hover:scale-110 hover:shadow-2xl transition duration-500 ease-in-out"
+        width="160" height="160">
+    </div>
+
+    <div class="flex justify-center mt-8">
+      <a href="Amadou_Diallo_CV.pdf" download
+        class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition font-semibold flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 4v16m8-8H4" />
+        </svg>
+        <span>Télécharger mon CV</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION COMPÉTENCES -->
+  <section id="competence" class="bg-white py-20 px-6">
+    <h2 class="text-center text-gray-700 font-bold text-3xl mb-6 hover:underline">MES COMPÉTENCES</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2">💻 Java</h3>
+        <p class="text-gray-600 text-sm">Programmation orientée objet, conception d’applications desktop et web.</p>
+      </div>
+      <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2">⚛️ React</h3>
+        <p class="text-gray-600 text-sm">Création d’interfaces utilisateur dynamiques et modernes.</p>
+      </div>
+      <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2">🌐 HTML & CSS</h3>
+        <p class="text-gray-600 text-sm">Structure et mise en forme de pages web accessibles et responsives.</p>
+      </div>
+      <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2">PHP</h3>
+        <p class="text-gray-600 text-sm">Développement web dynamique et gestion côté serveur.</p>
+      </div>
+      <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2 text-red-500">🌐 Laravel</h3>
+        <p class="text-gray-600 text-sm">Développement back-end robuste avec Laravel, gestion d’API REST et bases de données.</p>
+      </div>
+      <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2 text-orange-500">🔥 Svelte</h3>
+        <p class="text-gray-600 text-sm">Création d’interfaces performantes et légères avec Svelte.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION SKILLS -->
+  <section id="skills" class="bg-gray-800 py-20 px-6">
+    <h2 class="text-center text-white font-bold text-3xl mb-10 hover:underline">MES SKILLS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gray-900 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2 text-blue-400">⚛️ React</h3>
+        <p class="text-gray-300 text-sm mb-4">
+          Création de todo-lists dynamiques et interactives avec React, intégrant gestion d’état et UI moderne.
+        </p>
+        <a href="https://ton-lien-react.com" target="_blank"
+          class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition">
+          Voir la Todo List
+        </a>
+      </div>
+
+      <div class="bg-gray-900 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2 text-red-400">🌐 Laravel</h3>
+        <p class="text-gray-300 text-sm mb-4">
+          Développement d’applications todo-list robustes avec Laravel, API REST et gestion de base de données MySQL.
+        </p>
+        <a href="https://ton-lien-laravel.com" target="_blank"
+          class="inline-block bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-red-700 transition">
+          Voir la Todo List
+        </a>
+      </div>
+
+      <div class="bg-gray-900 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+        <h3 class="text-lg font-semibold mb-2 text-orange-400">🔥 Svelte</h3>
+        <p class="text-gray-300 text-sm mb-4">
+          Conception de todo-lists ultra légères avec Svelte, optimisées pour rapidité et performance.
+        </p>
+        <a href="https://ton-lien-svelte.com" target="_blank"
+          class="inline-block bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-600 transition">
+          Voir la Todo List
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CONTACT -->
+  <section id="contact" class="bg-white py-20 px-6">
+    <h2 class="text-center text-gray-800 font-bold text-3xl mb-6 hover:underline">CONTACTEZ-MOI</h2>
+    <form id="contactForm" class="max-w-xl mx-auto space-y-4">
+      <input id="name" type="text" placeholder="Votre nom" required
+        class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" />
+      <input id="email" type="email" placeholder="Votre email" required
+        class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" />
+      <textarea id="message" rows="4" placeholder="Votre message" required
+        class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+      <button type="submit"
+        class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition font-semibold">
+        Envoyer
+      </button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    © 2025 HACKDEV. Tous droits réservés.
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    (function() {
+      emailjs.init("BTHVu3mlLsbOMcm46"); // Ton USER_ID
+    })();
+
+    // ✅ Formulaire contact
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      try {
+        await emailjs.send("service_6yoclz5", "template_6yzmnw8", { name, email, message });
+        alert("Message envoyé avec succès ✅");
+        e.target.reset();
+      } catch (error) {
+        alert("❌ Erreur lors de l’envoi");
+        console.error(error);
+      }
+    });
+
+    // ✅ Burger Menu
+    const burgerBtn = document.getElementById("burgerBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    burgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    // Fermer menu après clic sur lien
+    document.querySelectorAll("#mobileMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
+
+</body>
+</html>
