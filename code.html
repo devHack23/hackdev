@@ -6,6 +6,17 @@
   <title>Portfolio HACKDEV</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <style>
+    /* Animation pour l'image de profil */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .floating-img {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
 
@@ -41,15 +52,16 @@
     <h1 class="text-center font-bold text-3xl text-white mb-6 hover:underline">À PROPOS</h1>
     <p class="text-white text-center max-w-2xl mx-auto leading-relaxed">
       Je me nomme <span class="font-bold">AMADOU WOURY DIALLO</span>, étudiant en licence 3 
-      en <span class="italic">développement et administration d’applications</span> à l’Université 
+      en <span class="italic">développement et administration d'applications</span> à l'Université 
       Alioune Diop de Bambey. Je suis un développeur <span class="text-blue-400">Full-Stack</span>, passionné 
       par la programmation et la création de solutions innovantes.
     </p>
 
     <div class="flex justify-center mt-6">
-      <img src="IMG.jpg" alt="Photo de profil"
-        class="rounded-full object-cover hover:scale-110 hover:shadow-2xl transition duration-500 ease-in-out"
-        width="160" height="160">
+      <!-- Remplacement de l'image HEIC par une image de profil générique -->
+      <div class="rounded-full w-40 h-40 bg-blue-600 flex items-center justify-center text-white text-6xl font-bold floating-img hover:scale-110 hover:shadow-2xl transition duration-500 ease-in-out">
+        A
+      </div>
     </div>
 
     <div class="flex justify-center mt-8">
@@ -71,11 +83,11 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
       <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
         <h3 class="text-lg font-semibold mb-2">💻 Java</h3>
-        <p class="text-gray-600 text-sm">Programmation orientée objet, conception d’applications desktop et web.</p>
+        <p class="text-gray-600 text-sm">Programmation orientée objet, conception d'applications desktop et web.</p>
       </div>
       <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
         <h3 class="text-lg font-semibold mb-2">⚛️ React</h3>
-        <p class="text-gray-600 text-sm">Création d’interfaces utilisateur dynamiques et modernes.</p>
+        <p class="text-gray-600 text-sm">Création d'interfaces utilisateur dynamiques et modernes.</p>
       </div>
       <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
         <h3 class="text-lg font-semibold mb-2">🌐 HTML & CSS</h3>
@@ -87,11 +99,11 @@
       </div>
       <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
         <h3 class="text-lg font-semibold mb-2 text-red-500">🌐 Laravel</h3>
-        <p class="text-gray-600 text-sm">Développement back-end robuste avec Laravel, gestion d’API REST et bases de données.</p>
+        <p class="text-gray-600 text-sm">Développement back-end robuste avec Laravel, gestion d'API REST et bases de données.</p>
       </div>
       <div class="bg-gray-100 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
         <h3 class="text-lg font-semibold mb-2 text-orange-500">🔥 Svelte</h3>
-        <p class="text-gray-600 text-sm">Création d’interfaces performantes et légères avec Svelte.</p>
+        <p class="text-gray-600 text-sm">Création d'interfaces performantes et légères avec Svelte.</p>
       </div>
     </div>
   </section>
@@ -103,7 +115,7 @@
       <div class="bg-gray-900 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
         <h3 class="text-lg font-semibold mb-2 text-blue-400">⚛️ React</h3>
         <p class="text-gray-300 text-sm mb-4">
-          Création de todo-lists dynamiques et interactives avec React, intégrant gestion d’état et UI moderne.
+          Création de todo-lists dynamiques et interactives avec React, intégrant gestion d'état et UI moderne.
         </p>
         <a href="https://ton-lien-react.com" target="_blank"
           class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition">
@@ -114,7 +126,7 @@
       <div class="bg-gray-900 shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
         <h3 class="text-lg font-semibold mb-2 text-red-400">🌐 Laravel</h3>
         <p class="text-gray-300 text-sm mb-4">
-          Développement d’applications todo-list robustes avec Laravel, API REST et gestion de base de données MySQL.
+          Développement d'applications todo-list robustes avec Laravel, API REST et gestion de base de données MySQL.
         </p>
         <a href="https://ton-lien-laravel.com" target="_blank"
           class="inline-block bg-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-red-700 transition">
@@ -175,7 +187,7 @@
         alert("Message envoyé avec succès ✅");
         e.target.reset();
       } catch (error) {
-        alert("❌ Erreur lors de l’envoi");
+        alert("❌ Erreur lors de l'envoi");
         console.error(error);
       }
     });
